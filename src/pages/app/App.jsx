@@ -30,7 +30,7 @@ function App() {
         texto con estilos de <code className="rounded bg-white/10 px-2 py-1 font-sans">src/tailwind.config.js</code>
       </div>
       <div className="rounded-xl bg-white/5 px-8 py-6 shadow-2xl">
-        <ButtonBasic onClick={() => setCount((count) => count + 1)} variant="primary" size="lg" >
+        <ButtonBasic onClick={() => setCount((count) => count + 1)} variant="primary" size="lg">
           count is {count} {mitexto}
         </ButtonBasic>
         <p className="mt-4 text-sm">

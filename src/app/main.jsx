@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import './styles/index.scss'
+import './styles/index.css'
 import { GlobalData } from './context/GlobalContext.jsx'
 import App from '../pages/app/App.jsx'
 
