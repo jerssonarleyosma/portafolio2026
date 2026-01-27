@@ -9,18 +9,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          500: "#6366f1", // color principal
-          600: "#4f46e5", // hover / active
-          700: "#4338ca", // pressed
+          500: "#F7DF1E", // color principal
+          600: "#A2984A", // hover / active
         },
         secondary: {
-          500: "#10b981",
-          600: "#059669",
-          700: "#047857",
+          500: "#1EDEF7",
+          600: "#4A7378",
         },
         accent: {
-          400: "#facc15",
-          500: "#eab308",
+          400: "#F71E8D",
+          500: "#784A62",
         },
       },
       fontFamily: {
