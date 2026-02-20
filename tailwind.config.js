@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: "class",
+  darkMode: "class",// media si es preferencia del sistema
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,16 +9,21 @@ export default {
     extend: {
       colors: {
         primary: {
-          500: "#F7DF1E", // color principal
-          600: "#A2984A", // hover / active
+          500: "#A2984A",
+          600: "#F7DF1E",
         },
         secondary: {
-          500: "#1EDEF7",
-          600: "#4A7378",
+          500: "#4A7378",
+          600: "#1EDEF7",
         },
         accent: {
-          400: "#F71E8D",
-          500: "#784A62",
+          a: "#F71E8D",
+          b: "#784A62",
+        },
+        fondo: {
+          a: "#b8f6ff",
+          b: "#edfcff",
+          c: "#fff6b2",
         },
       },
       fontFamily: {
