@@ -1,5 +1,4 @@
 @layer base {
-
   /*No inventar pesos*/
   :root {
     font-synthesis: none;
@@ -31,7 +30,6 @@
   html.light {
     color-scheme: light;
   }
-
 
   /* Tipografía base y renderizado */
   body {
@@ -96,7 +94,6 @@
      NO fuerces smooth scroll global si tu sitio tiene anchors críticos.
      Si lo quieres, hazlo con una clase utilitaria. */
   @media (prefers-reduced-motion: reduce) {
-
     html:focus-within {
       scroll-behavior: auto;
     }
@@ -109,6 +106,5 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.001ms !important;
     }
-   
   }
 }

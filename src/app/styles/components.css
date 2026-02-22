@@ -1,12 +1,11 @@
 @layer components {
   .btnLink {
-    @apply inline-flex flex-row items-center justify-center-safe align-middle px-4 py-2 font-sans;
+    @apply inline-flex flex-row items-center justify-center-safe px-4 py-2 align-middle font-sans;
   }
   .btnLink-primary {
-    @apply bg-secondary-500 text-secondary-600 rounded-tr-3xl rounded-bl-3xl hover:bg-secondary-600 hover:text-white focus:ring-blue-500;
+    @apply bg-secondary-500 text-secondary-600 hover:bg-secondary-600 rounded-tr-3xl rounded-bl-3xl hover:text-white focus:ring-blue-500;
   }
-   .btnLink-secondary {
-    @apply bg-accent-a text-secondary-600 rounded-tl-3xl rounded-br-3xl hover:bg-secondary-600 hover:text-white focus:ring-blue-500;
+  .btnLink-secondary {
+    @apply bg-accent-a text-secondary-600 hover:bg-secondary-600 rounded-tl-3xl rounded-br-3xl hover:text-white focus:ring-blue-500;
   }
-
 }

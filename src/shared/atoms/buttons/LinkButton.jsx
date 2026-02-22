@@ -12,37 +12,52 @@ import { Link } from "react-router-dom";
  * @returns {JSX.Element} - retorna una etiqueta <a> si el link abre otra página externa y retorna un link si se navega dentro de la misma web
  */
 
-function LinkButton({ to, external, variant = "none", className, children, ...props }) {
+function LinkButton({
+  to,
+  external,
+  variant = "none",
+  className,
+  children,
+  ...props
+}) {
+  if (!to) {
+    console.warn("LinkButton requiere la prop 'to'");
+    return null;
+  }
 
-    if (!to) {
-        console.warn("LinkButton requiere la prop 'to'");
-        return null;
-    }
+  const baseStyles = "btnLink";
 
-    const baseStyles = "btnLink";
+  const variants = {
+    none: "",
+    primary: "btnLink-primary",
+    secondary: "btnLink-secondary",
+  };
 
-    const variants = {
-        none: "",
-        primary: "btnLink-primary",
-        secondary: "btnLink-secondary",
+  const { href, target, rel, ...rest } = props;
 
-    };
-
-    const { href, target, rel, ...rest } = props;
-
-    if(external) {
-        return (
-            <a href={to} target="_blank" rel="noopener noreferrer" className={ cn(baseStyles, variants[variant], className) } {...rest}>
-                {children}
-            </a>
-        );
-    } else {
-        return (
-            <Link to={to} className={cn(baseStyles, variants[variant], className)} {...rest}>
-                {children}
-            </Link>
-        );
-    }
+  if (external) {
+    return (
+      <a
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(baseStyles, variants[variant], className)}
+        {...rest}
+      >
+        {children}
+      </a>
+    );
+  } else {
+    return (
+      <Link
+        to={to}
+        className={cn(baseStyles, variants[variant], className)}
+        {...rest}
+      >
+        {children}
+      </Link>
+    );
+  }
 }
 
 export { LinkButton };

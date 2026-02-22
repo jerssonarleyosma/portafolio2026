@@ -46,14 +46,12 @@ Abre `http://localhost:5173` en el navegador.
 
 ### 1) Crear componentes
 
-- Crea componentes  dentro de `shared` según arquitectura atomic y las paginas en `pages`.
+- Crea componentes dentro de `shared` según arquitectura atomic y las paginas en `pages`.
 - Ejemplo: `src/shared/atoms/buttons/Boton.jsx` y sigue la arquitectura atomic para hacer una layout y despues lo usas en main.jsx .
-
 
 ### 2) Agregar variables y utilidades en Tailwind
 
 Edita `tailwind.config.js` para extender el tema sin perder lo default:
-
 
 ```js
 export default {
@@ -64,7 +62,7 @@ export default {
       },
     },
   },
-}
+};
 ```
 
 - Usa `extend` para agregar o ajustar valores.
