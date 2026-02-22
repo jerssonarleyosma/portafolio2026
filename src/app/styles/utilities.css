@@ -26,14 +26,35 @@
   .clip-notch-tr {
     clip-path: polygon(
       0 0,
-      calc(100% - 120px) 0,
-      calc(100% - 120px) 60px,
-      140% 60px,
-      140% 140%,
+      calc(100% - 90px) 0,
+      /*inicio*/ calc(100% - 90px) 28px,
+      calc(100% - 89px) 30px,
+      calc(100% - 88px) 32px,
+      calc(100% - 87px) 34px,
+      calc(100% - 86px) 36px,
+      /*punto centrar*/ calc(100% - 84px) 37px,
+      calc(100% - 82px) 38px,
+      calc(100% - 80px) 39px,
+      calc(100% - 78px) 40px,
+      140% 40px,
+      /*final*/ 140% 140%,
       -40% 140%
     );
   }
 
+  .clip-notch-tr::before {
+    /*es para calcar la curva o como quedara el notch*/
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 40px;
+    background: transparent;
+    border-bottom-left-radius: 1rem;
+    z-index: 10;
+    pointer-events: none;
+  }
   @media (max-width: 1023px) {
     .clip-notch-tr {
       clip-path: none;
