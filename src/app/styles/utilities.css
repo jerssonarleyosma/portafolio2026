@@ -42,19 +42,6 @@
     );
   }
 
-  .clip-notch-tr::before {
-    /*es para calcar la curva o como quedara el notch*/
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 90px;
-    height: 40px;
-    background: transparent;
-    border-bottom-left-radius: 1rem;
-    z-index: 10;
-    pointer-events: none;
-  }
   @media (max-width: 1023px) {
     .clip-notch-tr {
       clip-path: none;

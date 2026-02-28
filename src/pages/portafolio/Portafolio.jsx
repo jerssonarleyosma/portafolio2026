@@ -1,33 +1,73 @@
-import { useState } from "react";
-import { LinkButton } from "@atoms/buttons/LinkButton";
-import {
-  GitHub,
-  Linkeding,
-  Mail,
-  Download,
-  Send,
-  Code,
-  Eye,
-  Filter,
-  Triangle,
-} from "../../shared/atoms/icons/LucideIcon";
+import { IconTooltip } from "@atoms/tooltip/IconTooltip";
+import { GitHub, Linkeding, Mail, Download } from "@atoms/icons/LucideIcon";
 
 function Portafolio() {
   return (
-    <div className="bg-gradient grid min-h-screen w-full grid-cols-1 gap-4 p-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5 lg:px-12">
-      <div className="bg-primary-600 shadow-secondary-500 rounded-xl p-4 shadow-md md:col-span-1 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3">
-        presentacion
-      </div>
+    <div className="bg-gradient grid min-h-screen w-full grid-cols-3 grid-rows-5 gap-4 px-8 py-16">
+      <article className="bg-primary-600 shadow-secondary-500 col-start-1 col-end-2 row-start-1 row-end-3 flex flex-wrap items-center justify-center gap-4 rounded-xl p-4 shadow-md">
+        <h1 className="typo-title border-accent-a text-secondary-500 border-b-4">
+          Fronted Developer
+        </h1>
+        <figure className="border-accent-a relative h-28 w-28 overflow-hidden rounded-full border-10 [border-style:outset] bg-white">
+          <img
+            src="/assets/jersson.jpg"
+            alt="imagen de perfil de jersson"
+            className="absolute -top-6 left-0 w-24"
+          />
+        </figure>
+        <h2 className="typo-subtitle text-secondary-500">Jersson Osma</h2>
+        <p className="typo-text text-secondary-500">
+          Frontend enfocado en Desarrollo herramientas web internas que
+          optimizan procesos operativos.
+        </p>
+        <div className="flex w-full flex-wrap justify-center gap-2">
+          <IconTooltip
+            to="https://github.com/jerssonarleyosma"
+            type="external"
+            color="black"
+            icon={GitHub}
+            text="GitHub"
+            position="top"
+          />
 
-      <div className="bg-secondary-500 shadow-secondary-500 rounded-xl p-4 shadow-lg md:col-span-1 lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-6">
+          <IconTooltip
+            to="https://www.linkedin.com/in/jersson-osma-3236bb2a9/"
+            type="external"
+            color="#0e76a8"
+            icon={Linkeding}
+            text="linkedin"
+            position="top"
+          />
+
+          <IconTooltip
+            to="jerssonarleyosma@gmail.com"
+            type="mail"
+            color="red"
+            icon={Mail}
+            text="jerssonarleyosma@gmail.com"
+            position="top"
+          />
+
+          <IconTooltip
+            to="/assets/Jersson_Osma_CV_Frontend_2026.docx"
+            type="download"
+            color="#07a630"
+            icon={Download}
+            text="CV"
+            position="top"
+          />
+        </div>
+      </article>
+
+      <div className="bg-secondary-500 shadow-secondary-500 col-start-1 col-end-2 row-start-3 row-end-6 rounded-xl p-4 shadow-lg">
         fomulario de contacto
       </div>
 
-      <div className="bg-primary-600 shadow-secondary-500 clip-notch-tr relative rounded-xl p-4 shadow-md md:col-span-2 lg:col-start-2 lg:col-end-4 lg:row-start-1 lg:row-end-4">
+      <div className="bg-primary-600 shadow-secondary-500 clip-notch-tr col-start-2 col-end-4 row-start-1 row-end-4 rounded-xl p-4 shadow-md">
         Proyectos
       </div>
 
-      <div className="bg-primary-600 shadow-secondary-500 rounded-xl p-4 shadow-md md:col-span-2 lg:col-start-2 lg:col-end-4 lg:row-start-4 lg:row-end-6">
+      <div className="bg-primary-600 shadow-secondary-500 col-start-2 col-end-4 row-start-4 row-end-6 rounded-xl p-4 shadow-md">
         certificaciones
       </div>
     </div>

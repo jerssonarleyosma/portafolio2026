@@ -1,6 +1,6 @@
-import React from "react";
+import { cn } from "@utils/cn";
 
-function GitHub() {
+function GitHub({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,11 +8,11 @@ function GitHub() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={props.stroke ? props.stroke : "currentColor"}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-github-icon lucide-github"
+      className={cn("lucide lucide-github-icon lucide-github", props.className)}
     >
       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
       <path d="M9 18c-4.51 2-5-2-7-2" />
@@ -20,7 +20,7 @@ function GitHub() {
   );
 }
 
-function Linkeding() {
+function Linkeding({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,11 +28,14 @@ function Linkeding() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={props.stroke ? props.stroke : "currentColor"}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-linkedin-icon lucide-linkedin"
+      className={cn(
+        "lucide lucide-linkedin-icon lucide-linkedin",
+        props.className,
+      )}
     >
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
       <rect width="4" height="12" x="2" y="9" />
@@ -41,7 +44,7 @@ function Linkeding() {
   );
 }
 
-function Mail() {
+function Mail({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -49,11 +52,11 @@ function Mail() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={props.stroke ? props.stroke : "currentColor"}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-mail-icon lucide-mail"
+      className={cn("lucide lucide-mail-icon lucide-mail", props.className)}
     >
       <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
       <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -61,7 +64,7 @@ function Mail() {
   );
 }
 
-function Download() {
+function Download({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -69,11 +72,14 @@ function Download() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={props.stroke ? props.stroke : "currentColor"}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-download-icon lucide-download"
+      className={cn(
+        "lucide lucide-download-icon lucide-download",
+        props.className,
+      )}
     >
       <path d="M12 15V3" />
       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
@@ -82,7 +88,7 @@ function Download() {
   );
 }
 
-function Send() {
+function Send({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -90,11 +96,11 @@ function Send() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={props.stroke ? props.stroke : "currentColor"}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-send-icon lucide-send"
+      className={cn("lucide lucide-send-icon lucide-send", props.className)}
     >
       <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
       <path d="m21.854 2.147-10.94 10.939" />
@@ -102,7 +108,7 @@ function Send() {
   );
 }
 
-function Code() {
+function Code({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -110,11 +116,14 @@ function Code() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={props.stroke ? props.stroke : "currentColor"}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-code-xml-icon lucide-code-xml"
+      className={cn(
+        "lucide lucide-code-xml-icon lucide-code-xml",
+        props.className,
+      )}
     >
       <path d="m18 16 4-4-4-4" />
       <path d="m6 8-4 4 4 4" />
@@ -123,7 +132,7 @@ function Code() {
   );
 }
 
-function Eye() {
+function Eye({ ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -131,11 +140,11 @@ function Eye() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke={props.stroke ? props.stroke : "currentColor"}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="lucide lucide-eye-icon lucide-eye"
+      className={cn("lucide lucide-eye-icon lucide-eye", props.className)}
     >
       <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
       <circle cx="12" cy="12" r="3" />
@@ -143,35 +152,38 @@ function Eye() {
   );
 }
 
-function Filter() {
+function Filter({ ...props }) {
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke={props.stroke ? props.stroke : "currentColor"}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="lucide lucide-funnel-icon lucide-funnel"
+    className={cn("lucide lucide-funnel-icon lucide-funnel", props.className)}
   >
     <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z" />
   </svg>;
 }
 
-function Triangle() {
+function Triangle({ ...props }) {
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke={props.stroke ? props.stroke : "currentColor"}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="lucide lucide-triangle-icon lucide-triangle"
+    className={cn(
+      "lucide lucide-triangle-icon lucide-triangle",
+      props.className,
+    )}
   >
     <path d="M13.73 4a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
   </svg>;
