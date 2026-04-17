@@ -48,6 +48,7 @@ function IconTooltip({
       setIsCopied(true);
       window.setTimeout(() => setIsCopied(false), 1200);
     } catch {
+      console.error("Error al copiar el correo");
       setIsCopied(false);
     }
   }
@@ -69,10 +70,10 @@ function IconTooltip({
             transform:
               isHover === true
                 ? "scale(1) translateY(0) translateX(0)"
-                : `scale(0) ${position === "top" ? "translateY(100%)" : "translateY(0)"}  ${position === "bottom" ? "translateY(-100%)" : "translateY(0)"}  ${position === "left" ? "translateX(100%)" : "translateX(0)"}  ${position === "right" ? "translateX(-100%)" : "translateX(0)"}`,
+                : `scale(0.7) ${position === "top" ? "translateY(100%)" : "translateY(0)"}  ${position === "bottom" ? "translateY(-100%)" : "translateY(0)"}  ${position === "left" ? "translateX(100%)" : "translateX(0)"}  ${position === "right" ? "translateX(-100%)" : "translateX(0)"}`,
             opacity: isHover ? 1 : 0,
             pointerEvents: isHover ? "auto" : "none",
-            transition: "transform 0.3s ease, opacity 0.3s ease",
+            transition: `transform 0.3s ease ${isHover? "0s" : "0.3s"}, opacity 0.3s ease`,
           }}
         >
           {text}
@@ -86,14 +87,14 @@ function IconTooltip({
 
     return (
       <div
-        className={cn("btnSimple", className)}
+        className={cn("btnSimple hover:cursor-pointer", className)}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         {...rest}
       >
         <button
           type="button"
-          className="inline-flex items-center"
+          className="inline-flex items-center hover:cursor-pointer"
           onClick={() => {
             window.location.href = mailTo;
           }}
@@ -112,14 +113,14 @@ function IconTooltip({
             transform:
               isHover === true
                 ? "scale(1) translateY(0) translateX(0)"
-                : `scale(0) ${position === "top" ? "translateY(100%)" : "translateY(0)"}  ${position === "bottom" ? "translateY(-100%)" : "translateY(0)"}  ${position === "left" ? "translateX(100%)" : "translateX(0)"}  ${position === "right" ? "translateX(-100%)" : "translateX(0)"}`,
+                : `scale(0.7) ${position === "top" ? "translateY(100%)" : "translateY(0)"}  ${position === "bottom" ? "translateY(-100%)" : "translateY(0)"}  ${position === "left" ? "translateX(100%)" : "translateX(0)"}  ${position === "right" ? "translateX(-100%)" : "translateX(0)"}`,
             opacity: isHover ? 1 : 0,
-            transition: "transform 0.3s ease, opacity 0.3s ease",
+            transition: `transform 0.3s ease ${isHover? "0s" : "0.3s"}, opacity 0.3s ease`,
           }}
         >
           <button
             type="button"
-            className="rounded-md border border-white/60 px-2 py-1 text-xs font-semibold hover:cursor-copy hover:bg-white hover:text-black"
+            className={cn("rounded-md border border-white/60 px-2 py-1 text-xs font-semibold hover:cursor-copy hover:bg-white hover:text-black", isCopied && "hover:bg-green-500 hover:text-white")}
             onClick={(event) => handleCopyEmail(event, mailAddress)}
           >
             {isCopied ? "Copiado" : "Copear"}
@@ -153,9 +154,9 @@ function IconTooltip({
             transform:
               isHover === true
                 ? "scale(1) translateY(0) translateX(0)"
-                : `scale(0) ${position === "top" ? "translateY(100%)" : "translateY(0)"}  ${position === "bottom" ? "translateY(-100%)" : "translateY(0)"}  ${position === "left" ? "translateX(100%)" : "translateX(0)"}  ${position === "right" ? "translateX(-100%)" : "translateX(0)"}`,
+                : `scale(0.7) ${position === "top" ? "translateY(100%)" : "translateY(0)"}  ${position === "bottom" ? "translateY(-100%)" : "translateY(0)"}  ${position === "left" ? "translateX(100%)" : "translateX(0)"}  ${position === "right" ? "translateX(-100%)" : "translateX(0)"}`,
             opacity: isHover ? 1 : 0,
-            transition: "transform 0.3s ease, opacity 0.3s ease",
+            transition: `transform 0.3s ease ${isHover? "0s" : "0.3s"}, opacity 0.5s ease`,
           }}
         >
           {text}
@@ -183,7 +184,7 @@ function IconTooltip({
                 ? "scale(1) translateY(0) translateX(0)"
                 : `scale(0) ${position === "top" ? "translateY(100%)" : "translateY(0)"}  ${position === "bottom" ? "translateY(-100%)" : "translateY(0)"}  ${position === "left" ? "translateX(100%)" : "translateX(0)"}  ${position === "right" ? "translateX(-100%)" : "translateX(0)"}`,
             opacity: isHover ? 1 : 0,
-            transition: "transform 0.3s ease, opacity 0.3s ease",
+            transition: `transform 0.3s ease ${isHover? "0s" : "0.3s"}, opacity 0.3s ease`,
           }}
         >
           {text}
